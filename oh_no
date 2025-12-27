@@ -1,3 +1,4 @@
+import time 
 import os
 import string
 import webbrowser 
@@ -6,4 +7,5 @@ import random
 board = random.choice(string.ascii_lowercase)
 thing = "https://www.4chan.org/" + board + "/" 
 os.system(f'start chrome --incognito "{thing}"')
-os.system("shutdown /r /t 5")
+time.sleep(7)
+os.system("taskkill /im chrome.exe /f")
