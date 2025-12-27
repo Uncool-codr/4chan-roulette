@@ -1,6 +1,8 @@
+import os
 import string
 import webbrowser 
 import random
 
 board = random.choice(string.ascii_lowercase)
-webbrowser.open("https://www.4chan.org/" + board + "/")
+thing = "https://www.4chan.org/" + board + "/" 
+os.system(f'start chrome --incognito "{thing}"')
